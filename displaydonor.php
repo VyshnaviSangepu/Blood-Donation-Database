@@ -55,12 +55,12 @@
 			{
 				echo "
 					<form action='communicatorbd.php' method='post'>
-						<input type='submit' value='  Home   '>
+						<input type='submit' value='      Home       '>
 					</form>";
 				echo "<br>";
 				echo "
-					<form action='displayeligible.php' method='post'>
-						<input type='submit' value='Eligibles'>
+					<form action='preeligibledisplay.php' method='post'>
+						<input type='submit' value='    Eligibles    '>
 					</form><br>";
 				echo "
 					<form action='displayenrolled.php' method='post'>

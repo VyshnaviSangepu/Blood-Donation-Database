@@ -57,9 +57,13 @@
                         $result = $myconnection->query($sql1);
                         if ($result->num_rows > 0)
                         {
-                            $row=$result->fetch_assoc();
-                            $oldlasttime=$row['lasttime'];
+			    $oldlasttime="28/01/1999";
+                            while ($row = $result->fetch_assoc())
+			    {
+                            	$oldlasttime=$row['lasttime'];
+			    }
                             $arr3=explode("/",$oldlasttime);
+			    $date3=date_create($arr3[2]."-".$arr3[1]."-".$arr3[0]);
                             $diff1=date_diff($date1,$date3);
                             $s=$diff->format("%R%a");
                             $s=$s*(-1);
@@ -69,7 +73,7 @@
                             {
                                 if($s>56)
                                 {
-                                    $sql4="DELETE FROM elligibles
+                                    $sql4="DELETE FROM eligibles
                                         WHERE email='$b';";
                                     if($myconnection->query($sql4)==TRUE)
                                     {
@@ -81,7 +85,7 @@
                                             echo "<p>Added to the donors table</p><br><br>";
                                             if($f>56)
                                             {
-                                                $sql3="INSERT INTO elligibles(name,email,mobile,bloodgroup,lasttime,timesincelast)
+                                                $sql3="INSERT INTO eligibles(name,email,mobile,bloodgroup,lasttime,timesincelast)
                                                     VALUES ('$a','$b','$c','$d','$e','$f')";
                                                 if($myconnection->query($sql3)==TRUE)
                                                     echo "<p>Added to the elligibles table<p>";
@@ -105,7 +109,7 @@
                                         echo "<p>Added to the donors table</p><br><br>";
                                         if($f>56)
                                         {
-                                            $sql3="INSERT INTO elligibles(name,email,mobile,bloodgroup,lasttime,timesincelast)
+                                            $sql3="INSERT INTO eligibles(name,email,mobile,bloodgroup,lasttime,timesincelast)
                                                 VALUES ('$a','$b','$c','$d','$e','$f')";
                                             if($myconnection->query($sql3)==TRUE)
                                             {
@@ -118,6 +122,10 @@
                                     else
                                         echo "Error: " . $sql . "<br>" . $myconnection->error;
                                 }
+				$sql5="DELETE FROM enrolleddonors
+                    			WHERE name='$a' AND email='$b' AND mobile='$c' AND bloodgroup='$d' AND lasttime='$e' AND enrolldate='$g';";
+                		if($myconnection->query($sql5)!=TRUE)
+                   			echo "Error: " . $sql5 . "<br>" . $myconnection->error;
                             }
                             else
                                 echo "Error: " . $sql2 . "<br>" . $myconnection->error;
@@ -132,15 +140,19 @@
                                 echo "<p>Added to the donors table</p>";
                                 if($f>56)
                                 {
-                                    $sql3="INSERT INTO elligibles(name,email,mobile,bloodgroup,lasttime,timesincelast)
+                                    $sql7="INSERT INTO eligibles(name,email,mobile,bloodgroup,lasttime,timesincelast)
                                         VALUES ('$a','$b','$c','$d','$e','$f')";
-                                    if($myconnection->query($sql3)==TRUE)
+                                    if($myconnection->query($sql7)==TRUE)
                                     {
                                         echo "<p>Added to the elligibles table<p>";
                                     }
                                     else
-                                        echo "Error: " . $sql3 . "<br>" . $myconnection-error;
+                                        echo "Error: " . $sql7 . "<br>" . $myconnection->error;
                                 }
+				$sql5="DELETE FROM enrolleddonors
+                    			WHERE name='$a' AND email='$b' AND mobile='$c' AND bloodgroup='$d' AND lasttime='$e' AND enrolldate='$g';";
+                		if($myconnection->query($sql5)!=TRUE)
+                   			echo "Error: " . $sql5 . "<br>" . $myconnection->error;
                             }
                             else
                                 echo "Error: " . $sql . "<br>" . $myconnection->error;
@@ -161,12 +173,8 @@
                         <form action='displayenrolled.php' method='post'>
                             <input type='submit' value='View the enrolled donors table'>
                         </form>";
+		    $myconnection->close();
                 }
-                $sql5="DELETE FROM enrolleddonors
-                    WHERE name='$a' email='$b' mobile='$c' bloodgroup='$d' lasttime='$e' enrolldate='$g';";
-                if($myconnection->query($sql5)!=TRUE)
-                    echo "Error: " . $sql5 . "<br>" . $myconnection-error;
-                $myconnection->close();
             }
         ?>
     </body>

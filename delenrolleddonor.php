@@ -56,9 +56,9 @@
                             <input type='submit' value='View the donors table'>
                         </form><br><br>";
                     echo "
-                        <form action='displayeligible.php' method='post'>
+                        <form action='preeligibledisplay.php' method='post'>
                             <input type='submit' value='View the eligibles table'>
-                        </form>";
+                        </form><br><br>";
                     echo "
                         <form action='displayenrolled.php' method='post'>
                             <input type='submit' value='View the enrolled donors table'>

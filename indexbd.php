@@ -1,20 +1,13 @@
-﻿<?php
-	session_start();
-?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Index of Photo Album</title>
+		<title>Index of Blood Donation</title>
 		<style>
-			body
-			{
-				background-color: pink;
-			}
 			h1
 			{
-				color: mediumvioletred;
+				color: #cc0000;
 				text-align: center;
-				font-size: 50px;
+				font-size: 60px;
 				font-family: "Lucida Console", Monaco, monospace;
 			}
 			p
@@ -22,44 +15,22 @@
 				text-align: center;
 				font-family: "Lucida Console", Monaco, monospace;
 			}
-			h4
+			h2
 			{
-				color: mediumvioletred;
+				color: #b30000;
 				text-align: left;
 				font-family: "Lucida Console", Monaco, monospace;
 			}
-			table
-			{
-    				border-collapse: collapse;
-			}
-			table, td, th
-			{
-				border: 1px solid mediumvioletred;
-			}
-			th
-			{
-				height: 65px;
-				font-size: 25px;
-				font-family: "Lucida Console", Monaco, monospace;
-				background-color: palevioletred;
-				color: black;
-			}
-			td
-			{
-				height: 50px;
-   				font-size: 20px;
-				font-family: "Lucida Console", Monaco, monospace;
-			}
-			tr:nth-child(even){background-color: #ebadc2;}	
 			input[type=submit]
 			{
-   				font-size: 20px; 
+   				font-size: 40px; 
 				font-family: "Lucida Console", Monaco, monospace;
-				background-color: plum;
+				background-color: #ff3333;
+				color: white;
 			}
 			input[type=text], select
 			{
-				font-size: 25px;
+				font-size: 45px;
 			}
 		</style>
 		<script>
@@ -77,20 +48,20 @@
 		</script>
 	</head>
 	<body>
-		<h4>Login as Admin<br><br>
+		<h2>Login as Admin<br><br>
 		<form method="post" onsubmit="return validateadmin()" action="indexbd.php">
 			Password:
 			<br><br>		
 			<input type="password" name="adminpassword" id="adminpassid" required>
 			<br><br>
 			<input type="submit" value="Login">
-		</form></h4>
+		</form></h2>
 		<br><br><br>
 		<h1>Enroll here to become a donor</h1>
-		//sign in with google... then redirect to enrollform.php
 		<form action='enrollform.php' method='post'>
 			<p><input type='submit' value='Enroll'><p>
 		</form>
+		<img src="v5.jpg" width="300" height="388">
 		<?php
 			if($_SERVER["REQUEST_METHOD"]=="POST")
 			{		

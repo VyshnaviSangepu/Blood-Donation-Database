@@ -15,7 +15,8 @@
 		body {
     background-image: url("v4.jpg");
     background-repeat: no-repeat;
-	background-position: left center;
+        background-position: left center;
+      
 }
 		</style>
 	</head>
@@ -26,7 +27,7 @@
 			<p><input type="submit" value="Display the donors table"></p>
 		</form>
 		<br>
-		<form method="post" action="displayeligible.php">
+		<form method="post" action="preeligibledisplay.php">
 			<p><input type="submit" value="Display the eligibles table"s></p>
 		</form>
 		<br>

@@ -47,15 +47,13 @@
 	</head>
 	<body>
 		<?php
-			if ($_SERVER["REQUEST_METHOD"] == "POST")
-			{
 				echo "
 					<form action='communicatorbd.php' method='post'>
-						<input type='submit' value=' Home '>
+						<input type='submit' value='      Home       '>
 					</form><br>";
 				echo "
 					<form action='displaydonor.php' method='post'>
-						<input type='submit' value='Donors'>
+						<input type='submit' value='      Donors     '>
 					</form><br>";
 				echo "
 					<form action='displayenrolled.php' method='post'>
@@ -99,7 +97,6 @@
 				else
 					echo "Error: " . $sql . "<br>" . $myconnection->error;
 				$myconnection->close();
-			}
 		?>
 	</body>
 </html>

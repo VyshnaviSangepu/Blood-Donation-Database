@@ -11,7 +11,7 @@
 			}
 			body
 			{
-				background-color: pink;
+				background-color:pink;
 			}
 			p
 			{
@@ -62,13 +62,22 @@
 				echo "<h1>Form to enroll as a donor</h1>";
 				echo "<form action='addenrolleddonor.php' method='post'>
 					<p>Name:</p>
-					<p><input type='text' name='name' pattern='[a-zA-Z]+ [a-zA-Z]+' title='Enter your full name.' required size='40' placeholder='Enter your full name'></p><br>
+					<p><input type='text' name='name' title='Enter your full name.' required size='40' placeholder='Enter your full name'></p><br>
 					<p>email-id:</p>
 					<p><input type='text' name='email' pattern='[a-zA-Z0-9._]+@iitdh.ac.in' title='Enter your iitdh email-id.' required size='40' placeholder='Enter your iitdh email-id.'></p><br>
 					<p>Mobile Number:</p>
 					<p><input type='text' name='mobile' pattern='0{0,}[0-9]{10}' title='Enter your mobile number.' required size='40' placeholder='Enter your mobile number.'></p><br>
 					<p>Blood Group:</p>
-					<p><input type='text' name='bloodgroup' pattern='[A-Z]{1,2}[+-]{1}' title='Enter your blood group in capital letters.' required size='40' placeholder='Enter your blood group in capital letters.'></p><br>
+					<p><select name='bloodgroup'>
+						    <option value='A+'>A+</option>
+						    <option value='A-'>A-</option>
+						    <option value='B+'>B+</option>
+						    <option value='B-'>B-</option>
+						    <option value='O+'>O+</option>
+						    <option value='O-'>O-</option>
+						    <option value='AB+'>AB+</option>
+						    <option value='AB-'>AB-</option>
+						  </select></p><br>
 					<p>Last Donation Date:</p>
 					<p><input type='text' name='lasttime' pattern='[0-9]{2}/[0-9]{2}/[0-9]{4}' title='Format : dd/mm/yyyy' placeholder='dd/mm/yyyy' required size='40'></p><br>
 					<p><input type='submit' value='Enroll'></p>

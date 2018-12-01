@@ -55,17 +55,17 @@
 			{
 				echo "
 					<form action='communicatorbd.php' method='post'>
-						<input type='submit' value='  Home   '>
+						<input type='submit' value='   Home    '>
 					</form>";
 				echo "<br>";
 				echo "
-					<form action='displayeligible.php' method='post'>
-						<input type='submit' value='Eligibles'>
+					<form action='displaydonor.php' method='post'>
+						<input type='submit' value='  Donors   '>
 					</form><br>";
 				echo "
-					<form action='displaydonor.php' method='post'>
-						<input type='submit' value='Donors'>
-					</form>";
+					<form action='preeligibledisplay.php' method='post'>
+						<input type='submit' value='Eligibles'>
+					</form><br>";
 				echo "<h1>Enrolled Donors</h1>";
 				require("logincredentials.php");
 				$mydatabase = "BloodDonation";
