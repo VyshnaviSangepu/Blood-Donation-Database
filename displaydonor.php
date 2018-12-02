@@ -68,7 +68,7 @@
 					</form><br>";
 				echo "
 					<form action='displayenrolled.php' method='post'>
-						<input type='submit' value='Enrolled donors'>
+						<input type='submit' value=' Enrolled donors '>
 					</form><br>";
 				echo "
 					<form action='donorblood.php' method='post'>

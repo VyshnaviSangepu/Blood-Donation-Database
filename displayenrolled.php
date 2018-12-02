@@ -64,7 +64,7 @@
 					</form><br>";
 				echo "
 					<form action='preeligibledisplay.php' method='post'>
-						<input type='submit' value='Eligibles'>
+						<input type='submit' value=' Eligibles '>
 					</form><br>";
 				echo "<h1>Enrolled Donors</h1>";
 				require("logincredentials.php");

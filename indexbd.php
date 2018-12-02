@@ -6,7 +6,7 @@
 			h1
 			{
 				color: #cc0000;
-				text-align: center;
+				text-align: left;
 				font-size: 60px;
 				font-family: "Lucida Console", Monaco, monospace;
 			}
@@ -32,6 +32,12 @@
 			{
 				font-size: 45px;
 			}
+			body {
+    background-image: url("v5.jpg");
+    background-repeat: no-repeat;
+        background-position: right top;
+      
+}
 		</style>
 	</head>
 	<body>
@@ -48,10 +54,5 @@
 		<form action='enrollform.php' method='post'>
 			<p><input type='submit' value='Enroll'><p>
 		</form>
-		<h1>Enroll here if you need blood</h1>
-		<form action='needform.php' method='post'>
-			<p><input type='submit' value='Enroll'><p>
-		</form>
-		<img src="v5.jpg" width="300" height="388">
 	</body>
 </html>

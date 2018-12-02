@@ -87,13 +87,6 @@
 					lasttime VARCHAR(120),
 					timesincelast VARCHAR(120)
 					);";
-					$sql.="CREATE TABLE enrolledacceptors(
-					name VARCHAR(120),
-					email VARCHAR(100),
-					mobile VARCHAR(120),
-					bloodgroup VARCHAR(120),
-					enrolldate VARCHAR(120)
-					);";
 					$sql.="CREATE TABLE enrolleddonors(
 					name VARCHAR(120),
 					email VARCHAR(100),

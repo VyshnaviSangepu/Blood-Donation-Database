@@ -14,11 +14,6 @@
 			background-color: #ff3333;
 			color: white;
 		}
-		body {
-	    		background-image: url("v3.png");
-	    		background-repeat: no-repeat;
-			background-position: left top;
-		}
 		</style>
 	</head>
 	<body>
@@ -27,8 +22,8 @@
 		<form action="homepage.php" method="post">
 			<p><input type="submit" value="Explore"></p>
 		</form>
-		<img src="v2.jpg">
-		<img id="v5" src="v6.jpg" align="right" width="804" height="250">
+		<img src="v2.jpg" width="360" height="125">
+		<img id="v5" src="v6.jpg" align="right" width="402" height="125">
 		<?php
 			if($_SERVER["REQUEST_METHOD"]=="POST")
 			{		
