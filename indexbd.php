@@ -33,23 +33,10 @@
 				font-size: 45px;
 			}
 		</style>
-		<script>
-			function validateadmin()
-			{
-				var x=document.getElementById("adminpassid").value;
-				if(x=="suchitra1")
-					return true;
-				else
-				{
-					window.alert("Password entered is incorrect");
-					return false;
-				}
-			}				
-		</script>
 	</head>
 	<body>
 		<h2>Login as Admin<br><br>
-		<form method="post" onsubmit="return validateadmin()" action="indexbd.php">
+		<form method="post" action="securebd.php">
 			Password:
 			<br><br>		
 			<input type="password" name="adminpassword" id="adminpassid" required>
@@ -62,11 +49,5 @@
 			<p><input type='submit' value='Enroll'><p>
 		</form>
 		<img src="v5.jpg" width="300" height="388">
-		<?php
-			if($_SERVER["REQUEST_METHOD"]=="POST")
-			{		
-				header("Location:communicatorbd.php");
-			}
-		?>
 	</body>
 </html>
