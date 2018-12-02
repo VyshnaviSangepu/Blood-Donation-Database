@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<style>
+			h2
+			{
+				text-align: right;
+			}
 			h1
 			{
 				color: mediumvioletred;
@@ -65,6 +69,21 @@
 				echo "
 					<form action='displayenrolled.php' method='post'>
 						<input type='submit' value='Enrolled donors'>
+					</form><br>";
+				echo "
+					<form action='donorblood.php' method='post'>
+						<h2><input type='submit' value='Search for Blood'><br><br>
+						<select name='blood'>
+						    <option value='A+'>A+</option>
+						    <option value='A-'>A-</option>
+						    <option value='B+'>B+</option>
+						    <option value='B-'>B-</option>
+						    <option value='O+'>O+</option>
+						    <option value='O-'>O-</option>
+						    <option value='AB+'>AB+</option>
+						    <option value='AB-'>AB-</option>
+						  </select><br>
+						</h2>
 					</form>";
 				echo "<h1>Donors Table</h1>";
 				require("logincredentials.php");

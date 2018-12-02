@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<style>
+			h2
+			{
+				text-align: right;
+			}
 			h1
 			{
 				color: mediumvioletred;
@@ -42,6 +46,10 @@
    				font-size: 25px; 
 				font-family: "Lucida Console", Monaco, monospace;
 				background-color: plum;
+			}
+			input[type=text], select
+			{
+				font-size: 25px;
 			}			
 		</style>
 	</head>
@@ -59,8 +67,22 @@
 					<form action='displayenrolled.php' method='post'>
 						<input type='submit' value='Enrolled donors'>
 					</form>";
+				echo "
+					<form action='eligibleblood.php' method='post'>
+						<h2><input type='submit' value='Search for Blood'><br><br>
+						<select name='blood'>
+						    <option value='A+'>A+</option>
+						    <option value='A-'>A-</option>
+						    <option value='B+'>B+</option>
+						    <option value='B-'>B-</option>
+						    <option value='O+'>O+</option>
+						    <option value='O-'>O-</option>
+						    <option value='AB+'>AB+</option>
+						    <option value='AB-'>AB-</option>
+						  </select><br>
+						</h2>
+					</form>";
 				echo "<h1>Eligibles Table</h1>";
-				
 				require("logincredentials.php");
 				$mydatabase = "BloodDonation";
 				$myconnection = new mysqli($servername, $username, $password, $mydatabase);
